@@ -1,11 +1,3 @@
-// Quando for feito scroll
-// adicionar a class navbar-scroll ao header
-// para diminuir o tamanho da nav
-var $document = $(document);
-$document.scroll(function () {
-    $("header").toggleClass("navbar-scroll", $document.scrollTop() >= 100);
-});
-
 // Smooth Scroll
 $('a[href*="#"]')
 .not('[href="#"]')
@@ -35,3 +27,24 @@ $('a[href*="#"]')
         }
     }
 });
+
+
+/* Quando for feito scroll
+// adicionar a class navbar-scroll ao header
+// para diminuir o tamanho da nav
+var $document = $(document);
+
+$document.scroll(function () {
+    $("header").toggleClass("navbar-scroll", $document.scrollTop() >= 100);
+});
+*/
+
+/*var $teste = $(document).width();
+
+var $navMobile = $(document.getElementById("nav-mobile"));
+var $teste_nav = $(document.getElementById("teste-nav"));
+
+$navMobile.click(function(){
+    $("header").toggleClass("teste-mobile");
+    $teste_nav.toggleClass("testeeee");
+});*/

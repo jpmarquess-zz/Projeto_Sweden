@@ -32,8 +32,22 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  .index-welcome {
+  .index-welcome,
+  .culture-welcome,
+  .facts-welcome,
+  .gallery-welcome,
+  .destinations-welcome {
     left: 200px !important;
+  }
+  .culture,
+  .facts,
+  .destinations {
+    text-align: center !important;
+  }
+  .culture img,
+  .facts img,
+  .destinations img {
+    width: 100%;
   }
 }
 
@@ -43,24 +57,57 @@ body {
   }
 }
 
-@media screen and (max-width: 830px) {
-  nav .navbar-flag {
+@media screen and (max-width: 850px) {
+  header {
+    height: 80px !important;
+  }
+  header nav {
+    text-align: center;
+  }
+  header nav .navbar-flag {
     float: none !important;
+    display: none !important;
   }
-  nav .navbar-nav {
+  header nav .navbar-nav {
     float: none !important;
-    display: none;
+    margin-top: -30px !important;
   }
-  nav .navbar-nav li {
-    display: block !important;
-    margin-top: 20px;
-  }
-  nav #nav-mobile {
+  header #nav-mobile {
     display: block !important;
   }
-  .index-welcome {
+  .index-welcome,
+  .culture-welcome,
+  .facts-welcome,
+  .gallery-welcome,
+  .destinations-welcome {
     left: 0px !important;
     padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 582px) {
+  header nav {
+    text-align: center;
+  }
+  header nav .navbar-flag {
+    float: none !important;
+    display: none !important;
+  }
+  header nav .navbar-nav {
+    float: none !important;
+    margin-top: -30px !important;
+  }
+  header nav .navbar-nav li {
+    margin-right: 10px !important;
+  }
+  header #nav-mobile {
+    display: block !important;
+  }
+  footer .footer-social ul li {
+    margin-right: 15px !important;
+  }
+  footer .separador {
+    display: none !important;
   }
 }
 
@@ -81,8 +128,6 @@ header nav {
   width: 70%;
   margin: 0 auto;
   padding: 55px 0;
-  -webkit-transition: padding .2s;
-  transition: padding .2s;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -93,10 +138,10 @@ header nav .navbar-flag {
 }
 
 header nav .navbar-flag li a img {
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
 header nav .navbar-nav {
@@ -139,6 +184,28 @@ header nav #nav-mobile {
   background-color: transparent;
   font-size: 2.2em;
   cursor: pointer;
+}
+
+.teste-mobile {
+  height: 100vh !important;
+}
+
+.testeeee {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  margin-top: 100px !important;
+  display: block !important;
+}
+
+.testeeee li {
+  margin-right: 0 !important;
+  margin-top: 50px !important;
+  width: 100% !important;
+  height: 40px;
+}
+
+.testeeee li a {
+  font-size: 2.2em !important;
 }
 
 .active {
@@ -248,10 +315,10 @@ footer .separador {
  * Index Page
  */
 .index-main {
-  background-image: url("../img/bg-index2.jpg");
+  background-image: url("../img/bg-index.jpg");
   height: 100vh;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -279,10 +346,10 @@ footer .separador {
   font-size: 2.2rem;
   margin-left: 5px;
   margin-top: 10px;
-  -webkit-transition: -webkit-transform .1s;
-  transition: -webkit-transform .1s;
-  transition: transform .1s;
-  transition: transform .1s, -webkit-transform .1s;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
 }
 
 .index-main .index-welcome a i:hover {
@@ -300,13 +367,14 @@ footer .separador {
   color: #000;
   font-size: 2.7rem;
   letter-spacing: 1px;
+  word-spacing: 10px;
   text-align: center;
   margin-bottom: 40px;
 }
 
 .index-info hr {
   border: 2px solid #000;
-  width: 50px;
+  width: 40px;
   margin-bottom: 30px;
 }
 
@@ -332,10 +400,10 @@ footer .separador {
   overflow: hidden;
   max-height: 340px;
   max-width: 100%;
-  -webkit-transition: -webkit-box-shadow .3s, -webkit-transform .3s;
-  transition: -webkit-box-shadow .3s, -webkit-transform .3s;
-  transition: box-shadow .3s, transform .3s;
-  transition: box-shadow .3s, transform .3s, -webkit-box-shadow .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-box-shadow .3s, -webkit-transform .3s ease-in-out;
+  transition: -webkit-box-shadow .3s, -webkit-transform .3s ease-in-out;
+  transition: box-shadow .3s, transform .3s ease-in-out;
+  transition: box-shadow .3s, transform .3s ease-in-out, -webkit-box-shadow .3s, -webkit-transform .3s ease-in-out;
 }
 
 .index-info .info-card figure:hover {
@@ -367,13 +435,13 @@ footer .separador {
 }
 
 .index-info .info-card figure img {
-  -webkit-transition: -webkit-filter .3s;
-  transition: -webkit-filter .3s;
-  transition: filter .3s;
-  transition: filter .3s, -webkit-filter .3s;
+  max-width: 100%;
+  -webkit-transition: -webkit-filter .3s ease-in-out;
+  transition: -webkit-filter .3s ease-in-out;
+  transition: filter .3s ease-in-out;
+  transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);
-  max-width: 100%;
 }
 
 .index-info .info-card figure figcaption {
@@ -391,10 +459,10 @@ footer .separador {
   color: #f2f3f2;
   margin-left: 30px;
   text-shadow: 1px 1px 2px #000;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
 .index-info .info-card figure figcaption p {
@@ -405,15 +473,15 @@ footer .separador {
   visibility: hidden;
   margin-left: 30px;
   max-width: 290px;
-  -webkit-transition: opacity .3s, visibility .3s;
-  transition: opacity .3s, visibility .3s;
+  -webkit-transition: opacity .3s, visibility .3s ease-in-out;
+  transition: opacity .3s, visibility .3s ease-in-out;
 }
 
 /*
  * Culture Page
  */
 .culture-main {
-  background-image: url("../img/bg-index2.jpg");
+  background-image: url("../img/winter-activities.jpg");
   height: 100vh;
   background-size: cover;
   background-position: top;
@@ -422,8 +490,8 @@ footer .separador {
 
 .culture-main .culture-welcome {
   position: absolute;
-  bottom: calc(50% - 300px);
-  left: 300px;
+  bottom: calc(50% - 260px);
+  left: 350px;
 }
 
 .culture-main .culture-welcome h1 {
@@ -444,15 +512,224 @@ footer .separador {
   font-size: 2.2rem;
   margin-left: 5px;
   margin-top: 10px;
-  -webkit-transition: -webkit-transform .1s;
-  transition: -webkit-transform .1s;
-  transition: transform .1s;
-  transition: transform .1s, -webkit-transform .1s;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
 }
 
 .culture-main .culture-welcome a i:hover {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
+}
+
+.culture {
+  padding: 30px 0 50px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.culture h2 {
+  font-size: 2.2em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.culture hr {
+  border: 2px solid #000;
+  width: 40px;
+  margin-top: 40px;
+}
+
+.culture p {
+  font-size: 1.3em;
+  line-height: 30px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin: 20px 0;
+  text-align: justify;
+}
+
+/*
+ * Facts Page
+ */
+.facts-main {
+  background-image: url("../img/facts.jpeg");
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.facts-main .facts-welcome {
+  position: absolute;
+  bottom: calc(50% - 260px);
+  left: 350px;
+}
+
+.facts-main .facts-welcome h1 {
+  color: #f2f3f2;
+  text-shadow: 1px 1px 2px #000;
+  text-align: left;
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+}
+
+.facts-main .facts-welcome a {
+  color: #f2f3f2;
+  text-decoration: none;
+}
+
+.facts-main .facts-welcome a i {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-left: 5px;
+  margin-top: 10px;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
+}
+
+.facts-main .facts-welcome a i:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.facts {
+  padding: 0 0 50px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.facts h2 {
+  font-size: 2.2em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.facts hr {
+  border: 2px solid #000;
+  width: 40px;
+  margin-top: 40px;
+}
+
+.facts p {
+  font-size: 1.3em;
+  line-height: 30px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin: 20px 0;
+  text-align: justify;
+}
+
+/*
+ * Gallery Page
+ */
+.gallery-main {
+  background-image: url("../img/gallery-main.jpeg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-main .gallery-welcome {
+  position: absolute;
+  bottom: calc(50% - 260px);
+  left: 350px;
+}
+
+.gallery-main .gallery-welcome h1 {
+  color: #f2f3f2;
+  text-shadow: 1px 1px 2px #000;
+  text-align: left;
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+}
+
+.gallery-main .gallery-welcome a {
+  color: #f2f3f2;
+  text-decoration: none;
+}
+
+.gallery-main .gallery-welcome a i {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-left: 5px;
+  margin-top: 10px;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
+}
+
+.gallery-main .gallery-welcome a i:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.gallery {
+  width: 70%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.gallery h1 {
+  color: #000;
+  font-size: 2.7rem;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery hr {
+  border: 2px solid #000;
+  width: 40px;
+  margin-bottom: 30px;
+}
+
+.gallery .gallery-card .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.gallery .gallery-card .row figure {
+  margin: 30px 0;
+  overflow: hidden;
+  max-height: 300px;
+  max-width: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.gallery .gallery-card .row figure:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.gallery .gallery-card .row figure:hover img {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.gallery .gallery-card .row figure img {
+  max-width: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
 }
 
 /*
@@ -490,10 +767,10 @@ footer .separador {
   font-size: 2.2rem;
   margin-left: 5px;
   margin-top: 10px;
-  -webkit-transition: -webkit-transform .1s;
-  transition: -webkit-transform .1s;
-  transition: transform .1s;
-  transition: transform .1s, -webkit-transform .1s;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
 }
 
 .destinations-main .destinations-welcome a i:hover {
@@ -501,141 +778,35 @@ footer .separador {
           transform: translateY(10px);
 }
 
-/*
- * Facts Page
- */
-.facts-main {
-  background-image: url("../img/bg-index2.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
+.destinations {
+  padding: 70px 0;
+  width: 70%;
+  margin: 0 auto;
 }
 
-.facts-main .facts-welcome {
-  position: absolute;
-  bottom: calc(50% - 300px);
-  left: 300px;
+.destinations .row {
+  margin-top: 30px;
 }
 
-.facts-main .facts-welcome h1 {
-  color: #f2f3f2;
-  text-shadow: 1px 1px 2px #000;
-  text-align: left;
-  font-size: 4.5rem;
-  letter-spacing: 2px;
+.destinations .destinations-wrapper h2 {
+  font-size: 2.2em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.facts-main .facts-welcome a {
-  color: #f2f3f2;
-  text-decoration: none;
+.destinations .destinations-wrapper hr {
+  border: 2px solid #000;
+  width: 40px;
+  margin-top: 40px;
 }
 
-.facts-main .facts-welcome a i {
-  cursor: pointer;
-  font-size: 2.2rem;
-  margin-left: 5px;
-  margin-top: 10px;
-  -webkit-transition: -webkit-transform .1s;
-  transition: -webkit-transform .1s;
-  transition: transform .1s;
-  transition: transform .1s, -webkit-transform .1s;
-}
-
-.facts-main .facts-welcome a i:hover {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
-}
-
-/*
- * Gallery Page
- */
-.gallery-main {
-  background-image: url("../img/bg-index2.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
-.gallery-main .gallery-welcome {
-  position: absolute;
-  bottom: calc(50% - 300px);
-  left: 300px;
-}
-
-.gallery-main .gallery-welcome h1 {
-  color: #f2f3f2;
-  text-shadow: 1px 1px 2px #000;
-  text-align: left;
-  font-size: 4.5rem;
-  letter-spacing: 2px;
-}
-
-.gallery-main .gallery-welcome a {
-  color: #f2f3f2;
-  text-decoration: none;
-}
-
-.gallery-main .gallery-welcome a i {
-  cursor: pointer;
-  font-size: 2.2rem;
-  margin-left: 5px;
-  margin-top: 10px;
-  -webkit-transition: -webkit-transform .1s;
-  transition: -webkit-transform .1s;
-  transition: transform .1s;
-  transition: transform .1s, -webkit-transform .1s;
-}
-
-.gallery-main .gallery-welcome a i:hover {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
-}
-
-/*
- * Things to Do
- */
-.things-to-do-main {
-  height: 100vh;
-  background-image: url("../img/winter-activities2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.things-to-do-main .things-to-do-welcome {
-  position: absolute;
-  bottom: calc(50% - 260px);
-  left: 200px;
-}
-
-.things-to-do-main .things-to-do-welcome h1 {
-  color: #f2f3f2;
-  text-shadow: 1px 1px 2px #000;
-  text-align: left;
-  font-size: 4.5rem;
-  letter-spacing: 2px;
-}
-
-.things-to-do-main .things-to-do-welcome a {
-  color: #f2f3f2;
-  text-decoration: none;
-}
-
-.things-to-do-main .things-to-do-welcome a i {
-  cursor: pointer;
-  font-size: 2.2rem;
-  margin-left: 5px;
-  margin-top: 10px;
-  -webkit-transition: -webkit-transform .1s;
-  transition: -webkit-transform .1s;
-  transition: transform .1s;
-  transition: transform .1s, -webkit-transform .1s;
-}
-
-.things-to-do-main .things-to-do-welcome a i:hover {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+.destinations .destinations-wrapper p {
+  font-size: 1.3em;
+  line-height: 30px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin: 20px 0;
+  text-align: justify;
 }
 /*# sourceMappingURL=main.css.map */

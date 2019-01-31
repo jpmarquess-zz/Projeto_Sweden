@@ -8,8 +8,22 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .index-welcome {
+    .index-welcome,
+    .culture-welcome,
+    .facts-welcome,
+    .gallery-welcome,
+    .destinations-welcome {
         left: 200px !important;
+    }
+
+    .culture,
+    .facts,
+    .destinations {
+        text-align: center !important;
+
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -19,19 +33,21 @@
     }
 }
 
-@media screen and (max-width: 830px) {
-    nav {
-        .navbar-flag {
-            float: none !important;
-        }
+@media screen and (max-width: 850px) {
+    header {
+        height: 80px !important;
 
-        .navbar-nav {
-            float: none !important;
-            display: none;
+        nav {
+            text-align: center;
 
-            li {
-                display: block !important;
-                margin-top: 20px;
+            .navbar-flag {
+                float: none !important;
+                display: none !important;
+            }
+    
+            .navbar-nav {
+                float: none !important;
+                margin-top: -30px !important;
             }
         }
 
@@ -40,9 +56,54 @@
         }
     }
 
-    .index-welcome {
+
+    .index-welcome,
+    .culture-welcome,
+    .facts-welcome,
+    .gallery-welcome,
+    .destinations-welcome {
         left: 0px !important;
         padding: 0 100px;
+    }
+}
+
+@media screen and (max-width: 582px) {
+    header {
+        nav {
+            text-align: center;
+
+            .navbar-flag {
+                float: none !important;
+                display: none !important;
+            }
+    
+            .navbar-nav {
+                float: none !important;
+                margin-top: -30px !important;
+
+                li {
+                    margin-right: 10px !important;
+                }
+            }
+        }
+
+        #nav-mobile {
+            display: block !important;
+        }
+    }
+
+    footer {
+        .footer-social {
+            ul {
+                li {
+                    margin-right: 15px !important;
+                }
+            }
+        }
+
+        .separador {
+            display: none !important;
+        }
     }
 }
 
@@ -61,7 +122,6 @@ header {
         width: 70%;
         margin: 0 auto;
         padding: 55px 0;
-        transition: padding .2s;
         transition: all .2s ease-in-out;
 
         .navbar-flag {
@@ -69,7 +129,7 @@ header {
             margin-top: -50px;
 
             li a img {
-                transition: transform .2s;
+                transition: transform .2s ease-in-out;
             }
         }
 
@@ -113,6 +173,27 @@ header {
             background-color: transparent;
             font-size: 2.2em;
             cursor: pointer;
+        }
+    }
+}
+
+.teste-mobile {
+    height: 100vh !important;
+}
+
+.testeeee {
+    transition: all .2s ease-in-out;
+    margin-top: 100px !important;
+    display: block !important;
+
+    li {
+        margin-right: 0 !important;
+        margin-top: 50px !important;
+        width: 100% !important;
+        height: 40px;
+
+        a {
+            font-size: 2.2em !important;
         }
     }
 }
@@ -216,10 +297,10 @@ footer {
  * Index Page
  */
 .index-main {
-    background-image: url("../img/bg-index2.jpg");
+    background-image: url("../img/bg-index.jpg");
     height: 100vh;
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
 
     .index-welcome {
@@ -244,7 +325,7 @@ footer {
                 font-size: 2.2rem;
                 margin-left: 5px;
                 margin-top: 10px;
-                transition: transform .1s;
+                transition: transform .1s ease-in-out;
                 
                 &:hover {
                     transform: translateY(10px);
@@ -263,13 +344,14 @@ footer {
         color: #000;
         font-size: 2.7rem;
         letter-spacing: 1px;
+        word-spacing: 10px;
         text-align: center;
         margin-bottom: 40px;
     }
 
     hr {
         border: 2px solid #000;
-        width: 50px;
+        width: 40px;
         margin-bottom: 30px;
     }
 
@@ -287,7 +369,7 @@ footer {
             overflow: hidden;
             max-height: 340px;
             max-width: 100%;
-            transition: box-shadow .3s, transform .3s;
+            transition: box-shadow .3s, transform .3s ease-in-out;
             
             &:hover {
                 box-shadow: -10px 15px 25px rgba(0, 0, 0, 0.5);
@@ -313,9 +395,9 @@ footer {
             }
 
             img {
-                transition: filter .3s;
-                filter: brightness(.7);
                 max-width: 100%;
+                transition: filter .3s ease-in-out;
+                filter: brightness(.7);
             }
             
             figcaption  {
@@ -332,7 +414,7 @@ footer {
                     color: #f2f3f2;
                     margin-left: 30px;
                     text-shadow: 1px 1px 2px #000;
-                    transition: transform .3s;
+                    transition: transform .3s ease-in-out;
                 }
 
                 p {
@@ -343,7 +425,7 @@ footer {
                     visibility: hidden;
                     margin-left: 30px;
                     max-width: 290px;
-                    transition: opacity .3s, visibility .3s;
+                    transition: opacity .3s, visibility .3s ease-in-out;
                 }
             }
         }
@@ -354,7 +436,7 @@ footer {
  * Culture Page
  */
 .culture-main {
-    background-image: url("../img/bg-index2.jpg");
+    background-image: url("../img/winter-activities.jpg");
     height: 100vh;
     background-size: cover;
     background-position: top;
@@ -362,8 +444,8 @@ footer {
 
     .culture-welcome {
         position: absolute;
-        bottom: calc(50% - 300px);
-        left: 300px;
+        bottom: calc(50% - 260px);
+        left: 350px;
 
         h1 {
             color: #f2f3f2;
@@ -382,10 +464,201 @@ footer {
                 font-size: 2.2rem;
                 margin-left: 5px;
                 margin-top: 10px;
-                transition: transform .1s;
+                transition: transform .1s ease-in-out;
                 
                 &:hover {
                     transform: translateY(10px);
+                }
+            }
+        }
+    }
+}
+
+.culture {
+    padding: 30px 0 50px;
+    width: 70%;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 2.2em;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    hr {
+        border: 2px solid #000;
+        width: 40px;
+        margin-top: 40px;
+    }
+
+    p {
+        font-size: 1.3em;
+        line-height: 30px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        margin: 20px 0;
+        text-align: justify;
+    }
+}
+
+/*
+ * Facts Page
+ */
+.facts-main {
+    background-image: url("../img/facts.jpeg");
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    .facts-welcome {
+        position: absolute;
+        bottom: calc(50% - 260px);
+        left: 350px;
+
+        h1 {
+            color: #f2f3f2;
+            text-shadow: 1px 1px 2px #000;
+            text-align: left;
+            font-size: 4.5rem;
+            letter-spacing: 2px;
+        }
+
+        a {
+            color: #f2f3f2;
+            text-decoration: none;
+    
+            i {
+                cursor: pointer;
+                font-size: 2.2rem;
+                margin-left: 5px;
+                margin-top: 10px;
+                transition: transform .1s ease-in-out;
+                
+                &:hover {
+                    transform: translateY(10px);
+                }
+            }
+        }
+    }
+}
+
+.facts {
+    padding: 0 0 50px;
+    width: 70%;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 2.2em;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    hr {
+        border: 2px solid #000;
+        width: 40px;
+        margin-top: 40px;
+    }
+
+    p {
+        font-size: 1.3em;
+        line-height: 30px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        margin: 20px 0;
+        text-align: justify;
+    }
+}
+
+/*
+ * Gallery Page
+ */
+ .gallery-main {
+    background-image: url("../img/gallery-main.jpeg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .gallery-welcome {
+        position: absolute;
+        bottom: calc(50% - 260px);
+        left: 350px;
+
+        h1 {
+            color: #f2f3f2;
+            text-shadow: 1px 1px 2px #000;
+            text-align: left;
+            font-size: 4.5rem;
+            letter-spacing: 2px;
+        }
+
+        a {
+            color: #f2f3f2;
+            text-decoration: none;
+    
+            i {
+                cursor: pointer;
+                font-size: 2.2rem;
+                margin-left: 5px;
+                margin-top: 10px;
+                transition: transform .1s ease-in-out;
+                
+                &:hover {
+                    transform: translateY(10px);
+                }
+            }
+        }
+    }
+}
+
+.gallery {
+    width: 70%;
+    margin: 0 auto;
+    padding: 60px 0;
+
+    h1 {
+        color: #000;
+        font-size: 2.7rem;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    hr {
+        border: 2px solid #000;
+        width: 40px;
+        margin-bottom: 30px;
+    }
+
+    .gallery-card {
+        .row {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+
+            figure {
+                margin: 30px 0;
+                overflow: hidden;
+                max-height: 300px;
+                max-width: 100%;
+                transition: all .3s ease-in-out;
+                
+                &:hover {
+                    transform: scale(1.2);
+
+                    img {
+                        filter: brightness(1);
+                    }
+                }
+
+                img {
+                    max-width: 100%;
+                    transition: all .3s ease-in-out;
+                    filter: brightness(.6);
                 }
             }
         }
@@ -424,7 +697,7 @@ footer {
                 font-size: 2.2rem;
                 margin-left: 5px;
                 margin-top: 10px;
-                transition: transform .1s;
+                transition: transform .1s ease-in-out;
                 
                 &:hover {
                     transform: translateY(10px);
@@ -434,128 +707,36 @@ footer {
     }
 }
 
-/*
- * Facts Page
- */
-.facts-main {
-    background-image: url("../img/bg-index2.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
+.destinations {
+    padding: 70px 0;
+    width: 70%;
+    margin: 0 auto;
 
-    .facts-welcome {
-        position: absolute;
-        bottom: calc(50% - 300px);
-        left: 300px;
-
-        h1 {
-            color: #f2f3f2;
-            text-shadow: 1px 1px 2px #000;
-            text-align: left;
-            font-size: 4.5rem;
-            letter-spacing: 2px;
-        }
-
-        a {
-            color: #f2f3f2;
-            text-decoration: none;
-    
-            i {
-                cursor: pointer;
-                font-size: 2.2rem;
-                margin-left: 5px;
-                margin-top: 10px;
-                transition: transform .1s;
-                
-                &:hover {
-                    transform: translateY(10px);
-                }
-            }
-        }
+    .row {
+        margin-top: 30px;
     }
-}
 
-/*
- * Gallery Page
- */
-.gallery-main {
-    background-image: url("../img/bg-index2.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-
-    .gallery-welcome {
-        position: absolute;
-        bottom: calc(50% - 300px);
-        left: 300px;
-
-        h1 {
-            color: #f2f3f2;
-            text-shadow: 1px 1px 2px #000;
-            text-align: left;
-            font-size: 4.5rem;
-            letter-spacing: 2px;
+    .destinations-wrapper {
+        h2 {
+            font-size: 2.2em;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            text-align: center;
         }
 
-        a {
-            color: #f2f3f2;
-            text-decoration: none;
-
-            i {
-                cursor: pointer;
-                font-size: 2.2rem;
-                margin-left: 5px;
-                margin-top: 10px;
-                transition: transform .1s;
-                
-                &:hover {
-                    transform: translateY(10px);
-                }
-            }
-        }
-    }
-}
-
-/*
- * Things to Do
- */
-.things-to-do-main {
-    height: 100vh;
-    background-image: url("../img/winter-activities2.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    .things-to-do-welcome {
-        position: absolute;
-        bottom: calc(50% - 260px);
-        left: 200px;
-
-        h1 {
-            color: #f2f3f2;
-            text-shadow: 1px 1px 2px #000;
-            text-align: left;
-            font-size: 4.5rem;
-            letter-spacing: 2px;
+        hr {
+            border: 2px solid #000;
+            width: 40px;
+            margin-top: 40px;
         }
 
-        a {
-            color: #f2f3f2;
-            text-decoration: none;
-
-            i {
-                cursor: pointer;
-                font-size: 2.2rem;
-                margin-left: 5px;
-                margin-top: 10px;
-                transition: transform .1s;
-                
-                &:hover {
-                    transform: translateY(10px);
-                }
-            }
+        p {
+            font-size: 1.3em;
+            line-height: 30px;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            margin: 20px 0;
+            text-align: justify;
         }
     }
 }
